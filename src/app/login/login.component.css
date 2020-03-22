@@ -1,0 +1,32 @@
+.Container {
+  width: 400px;
+  height: 400px;
+  background: #ededed;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+mat-card {
+  height: 100%;
+  position: relative;
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button-flex-container {
+  display: flex;
+  justify-content: center;
+}
+.input-flex-container {
+  display: flex;
+  justify-content: center;
+}
+.title-flex-container {
+  display: flex;
+  justify-content: center;
+}
