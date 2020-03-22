@@ -1,0 +1,27 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 300px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-warn {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+div {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 200px 1000px;
+  grid-gap: 10px;
+}
+mat-card {
+  padding: 10%;
+  width: 300px;
+}

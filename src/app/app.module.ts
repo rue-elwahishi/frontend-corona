@@ -10,11 +10,17 @@ import { FormsModule } from "@angular/forms";
 import {
   MatCardModule,
   MatInputModule,
-  MatButtonModule
+  MatButtonModule,
+  MatSidenavModule
 } from "@angular/material";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, SidebarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -23,7 +29,12 @@ import {
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    MatSidenavModule,
+    FormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
