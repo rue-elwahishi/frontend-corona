@@ -1,33 +1,16 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
-  >
-    <mat-toolbar>Corona </mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Home </a>
-      <a mat-list-item href="#"> Advices</a>
-      <a mat-list-item href="#"> Ads</a>
-      <a mat-list-item href="#"> FAQ </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-    </mat-toolbar>
+<div class="d-flex sticky-top fill-heightnoo m-0">
 
-    <!-- Add Content Here -->
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="text-center sidebar-heading w-100">Corona Virus </div>
+    <div class=" pointer list-group list-group-flush m-2">
+      <li href="#" class="pointer list-group-item list-group-item-action">Home</li>
+      <li href="#" class="pointer list-group-item list-group-item-action">Advice</li>
+      <li href="#" class="pointer list-group-item list-group-item-action">Ads</li>
+      <li href="#" class="pointer list-group-item list-group-item-action">FAQ</li>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  </div>

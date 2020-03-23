@@ -1,10 +1,145 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-html,
-body {
+html, body {
   height: 100%;
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+.fill-height{
+  min-height: 100%;
+  height: 100%;
+}
+
+li{
+  list-style-type: none;
+  padding: 10px;
+}
+span{
+  color: #636262;
+  font-size: 20px;
+}
+
+.col-sm-3{
+  padding:12px;
+  background-color: #F9F9F9;
+  margin-left: -40px;
+}
+
+.active{
+  color: #fff;
+  padding: 12 px;
+  width: 100%;
+}
+
+.btn-danger {
+  background-color: #BF3F3F!important;
+  color: #fff!important;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+.my-bg-darkish {
+  transition: all 0.75s;
+  background-color: #403d4e;
+  /* background-color: #282833 !important */
+}
+
+.table {
+transition: all 0.75s !important;
+}
+
+.my-tr {
+transition: all 0.3s;
+}
+
+.my-tr:hover {
+background-color: #8d70776c !important;
+}
+
+.my-sidebar-item:hover {
+background-color: #803d4e;
+}
+
+.my-tab.active {
+color: rgb(51, 51, 51) !important;
+}
+.my-tab.active:hover {
+color: rgb(51, 51, 51)  !important;
+}
+.my-tab.active:focus {
+color: rgb(51, 51, 51)  !important;
+}
+
+.my-mainbg-darkish {
+background-color: #272332;
+/* background-color: #fff !important */
+}
+button.btn.calendar.bg-light.text-dark {
+margin-top: 0;
+padding: 9.5px 15px;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 15px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 15px;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.font-shoulders{
+font-family: 'Big Shoulders Text', cursive;
 }
