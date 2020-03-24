@@ -7,6 +7,7 @@ import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
+import { ImageCropperModule } from "ngx-image-cropper";
 import {
   MatCardModule,
   MatInputModule,
@@ -14,14 +15,24 @@ import {
   MatSidenavModule
 } from "@angular/material";
 import { SidebarComponent } from "./sidebar/sidebar.component";
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-
+import { LayoutModule } from "@angular/cdk/layout";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatListModule } from "@angular/material/list";
+import { AdvicesComponent } from "./advices/advices.component";
+import { SliderComponent } from "./slider/slider.component";
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, SidebarComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    SidebarComponent,
+    AdvicesComponent,
+    SliderComponent,
+    FaqComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +46,8 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

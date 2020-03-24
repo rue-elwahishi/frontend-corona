@@ -1,0 +1,60 @@
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div
+      class="carousel-item active"
+      style="display: flex; justify-content: center; flex-direction: column;"
+    >
+      <img
+        class="d-block w-60"
+        style="width: 100%; height: 100%;"
+        src="https://wowslider.com/posts/data/upload/2017/04/onlyslides1.jpg"
+      />
+      <label class="custom-file-upload">
+        <input type="file" />
+        <h6 style="color: black; font-size: 50px;">add picture</h6>
+      </label>
+      
+        <label for="file-input" style="position: relative; z-index: 10;">
+        <img
+          style="margin: 60px; cursor: pointer; width: 30px;"
+          src="../../assets/camera.png"
+        />
+      </label>
+
+      <input style="display: none; " id="file-input" type="file" name="file" /> -->
+<!-- </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row" style="margin-top: 10%;">
+    <div class="text-center col-md-8">
+      <image-cropper
+        style=" padding: 35%;"
+        [imageChangedEvent]="imageChangedEvent"
+        [maintainAspectRatio]="true"
+        [aspectRatio]="4 / 4"
+        [resizeToWidth]="256"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady()"
+        (loadImageFailed)="loadImageFailed()"
+      >
+      </image-cropper>
+    </div>
+    <div class="text-center col-md-4">
+      <h5>Preview</h5>
+      <img *ngIf="croppedImage === ''" src="../../assets/camera.png" />
+      <img [src]="croppedImage" />
+    </div>
+  </div>
+  <div class="row" style="margin-top: 5%;">
+    <div class="text-center col-md-12">
+      <label class="custom-file-upload">
+        <input type="file" (change)="fileChangeEvent($event)" />
+        <h6 style="color: black; font-size: 50px;">add picture</h6>
+      </label>
+    </div>
+  </div>
+</div>

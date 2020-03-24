@@ -1,16 +1,37 @@
 <div class="d-flex sticky-top fill-heightnoo m-0">
-
-  
   <!-- Sidebar -->
   <div class="bg-light border-right" id="sidebar-wrapper">
-    <div class="text-center sidebar-heading w-100">Corona Virus </div>
+    <div class="text-center sidebar-heading w-100">Corona Virus</div>
     <div class=" pointer list-group list-group-flush m-2">
-      <li href="#" class="pointer list-group-item list-group-item-action">Home</li>
-      <li href="#" class="pointer list-group-item list-group-item-action">Advice</li>
-      <li href="#" class="pointer list-group-item list-group-item-action">Ads</li>
-      <li href="#" class="pointer list-group-item list-group-item-action">FAQ</li>
+      <li
+        [routerLink]="['/home']"
+        routerLinkActive="router-link-active"
+        class="pointer list-group-item list-group-item-action"
+      >
+        Home
+      </li>
+      <li
+        [routerLink]="['/advices']"
+        routerLinkActive="router-link-active"
+        class="pointer list-group-item list-group-item-action"
+      >
+        Advice
+      </li>
+      <li
+        [routerLink]="['/Ads']"
+        routerLinkActive="router-link-active"
+        class="pointer list-group-item list-group-item-action"
+      >
+        Ads
+      </li>
+      <li
+        [routerLink]="['/routePath']"
+        routerLinkActive="router-link-active"
+        class="pointer list-group-item list-group-item-action"
+      >
+        FAQ
+      </li>
     </div>
   </div>
   <!-- /#sidebar-wrapper -->
-
-  </div>
+</div>
