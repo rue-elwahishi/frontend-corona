@@ -1,112 +1,315 @@
-<div class="container my-5">
+<div class="container my-5 mx-4">
   <!--Section: Content-->
-  <section>
-    <!-- Section heading -->
-    <h3 class="font-weight-bold black-text mb-4 pb-2 text-center">
-      Frequently Asked Questions
-    </h3>
-    <div>
+  <section class="d-flex justify-content-center p-3">
+    <div class="col">
+      <!-- Section heading -->
+      <h2 class="font-weight-bold black-text mb-4 pb-2 text-center">
+        Frequently Asked Questions
+      </h2>
+
       <div class="row ml-2">
         <button
-          style="background-color: transparent; width: 70;"
+          style="background-color: transparent; width: 70; color: black; font-size: 30px; border: none;"
           type="button"
           class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+          data-whatever="@getbootstrap"
         >
-          <h3 style="color: black;">+</h3>
+          <img
+            style="width: 30px; height: 30px;"
+            src="../../assets/unnamed.png"
+          />
         </button>
       </div>
-    </div>
-    <hr class="w-header" />
-    <!-- Section description -->
-    <!-- <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">
+
+      <hr class="w-header" />
+      <!-- Section description -->
+      <!-- <p class="lead text-muted mx-auto mt-4 pt-2 mb-5 text-center">
       Got a question? We've got answers. If you have some other questions, see
       our support center.
     </p> -->
 
-    <div class="row text-center text-md-left">
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 1
-        </button>
-        <button type="button" class="btn btn-primary">edit</button>
-      </div>
+      <div class="row text-center text-md-left">
+        <!-- <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
 
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 2
-        </button>
-        <button type="button" class="btn btn-primary">edit</button>
-      </div>
+              <div
+                id="collapseOne"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 1
-        </button>
-        <button type="button" class="btn btn-primary">edit</button>
-      </div>
+        <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseTwo"
+                  >
+                    Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
 
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 1
-        </button>
-        <button type="button" class="btn btn-primary">edit</button>
-      </div>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
 
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 1
-        </button>
+        <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                    aria-expanded="true"
+                    aria-controls="collapseThree"
+                  >
+                    Collapsible Group Item #1
+                  </button>
+                </h5>
+              </div>
 
-        <button type="button" class="btn btn-primary">edit</button>
-      </div>
+              <div
+                id="collapseThree"
+                class="collapse"
+                aria-labelledby="headingThree"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-md-6 mb-4 d-flex justify-content-between">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModal"
-          data-whatever="@getbootstrap"
-        >
-          Question 1
-        </button>
-        <button type="button" class="btn btn-primary">edit</button>
+        <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="d-flex flex-row">
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="small"
+                  name="size"
+                />
+                <label for="small" class="form__radio-label">
+                  <span class="form__radio-botton"></span>
+                </label>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button
+                      style="color: black;"
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="true"
+                      aria-controls="collapseFour"
+                    >
+                      how do I know I have Symptoms?
+                    </button>
+                  </h5>
+                  <!-- <input
+                  type="radio"
+                  aria-label="Radio button for following text input"
+                /> -->
+                </div>
+
+                <div
+                  id="collapseFour"
+                  class="collapse "
+                  aria-labelledby="headingFour"
+                  data-parent="#accordion"
+                >
+                  <div class="d-flex flex-column">
+                    <div class="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <!-- <button
+                        style="width: 17%; border: transparent; background-color: transparent; margin-left: 8px; padding-bottom: 10px;"
+                        type="button"
+                        class="btn btn-secondary"
+                      >
+                        <img src="../../assets/icons8-edit-24 (1).png" />
+                      </button> -->
+
+                      <div>
+                        <input
+                          style="margin-right: 13px;"
+                          type="image"
+                          src="../../assets/icons8-edit-24 (1).png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Question 2
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4 d-flex justify-content-between">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Question 1
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life
+                  accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa
+                  nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                  aliqua put a bird on it squid single-origin coffee nulla
+                  assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                  beer labore wes anderson cred nesciunt sapiente ea proident.
+                  Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                  beer farm-to-table, raw denim aesthetic synth nesciunt you
+                  probably haven't heard of them accusamus labore sustainable
+                  VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
 </div>
 <!-- question model -->
-
 <div
   class="modal fade"
   id="exampleModal"
@@ -118,7 +321,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h5 class="modal-title" id="exampleModalLabel">New Question</h5>
         <button
           type="button"
           class="close"
@@ -131,13 +334,13 @@
       <div class="modal-body">
         <form>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label"
-              >Recipient:</label
-            >
+            <label for="recipient-name" class="col-form-label"></label>
+            Question
+
             <input type="text" class="form-control" id="recipient-name" />
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
+            <label for="message-text" class="col-form-label">Answer</label>
             <textarea class="form-control" id="message-text"></textarea>
           </div>
         </form>
@@ -146,9 +349,9 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">save</button>
+        <button type="button" class="btn btn-primary">Add Question</button>
       </div>
     </div>
   </div>
 </div>
-<!-- question model -->
+<!-- question -->

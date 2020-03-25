@@ -43,8 +43,5 @@ input[type="file"] {
   padding: 6px 30px;
   cursor: pointer;
 }
-
-.source-image {
-  background: url("https://x.kinja-static.com/assets/images/logos/placeholders/default.png") !important;
-  visibility: visible !important;
+.img-fluid {
 }

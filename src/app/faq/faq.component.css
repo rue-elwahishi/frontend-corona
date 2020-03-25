@@ -1,0 +1,40 @@
+.form__radio-group {
+  display: inline-block;
+}
+.form__radio-input {
+  display: none;
+}
+.form__radio-label {
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 40px;
+  margin-top: 25px;
+}
+.form__radio-botton {
+  height: 19px;
+  width: 19px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+}
+.form__radio-botton::after {
+  content: "";
+  display: block;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.form__radio-input:checked ~ .form__radio-label .form__radio-botton::after {
+  opacity: 1;
+}
