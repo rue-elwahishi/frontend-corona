@@ -1,3 +1,15 @@
 div.shadow {
   /* box-shadow: 1px 1px 1px grey; */
 }
+.contain {
+  width: 100px !important;
+  height: 100px !important;
+
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  margin: auto !important;
+}
