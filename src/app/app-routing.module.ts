@@ -5,6 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from "./faq/faq.component";
+import { MediaComponent } from './media/media.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: "Ads", component: SliderComponent },
   { path: "FAQ", component: FaqComponent },
 
-  { path: "login", component: LoginComponent }
+  { path: "login", component: LoginComponent },
+  { path: "upload", component: MediaComponent }
 ];
 
 @NgModule({

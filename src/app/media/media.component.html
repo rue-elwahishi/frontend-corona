@@ -1,0 +1,22 @@
+<form [formGroup] = "uploadForm"  (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label for="mediaName">Name</label>
+        <input formControlName="name" name="name" type="text" class="form-control" id="mediaName" placeholder="file name here with extension (e.g .png)">
+    </div>
+    
+    <div class="form-group">
+        <label for="mediaType">Type</label>
+        <select formControlName="type" name="type" class="form-control" id="mediaType">
+            <option>Image</option>
+            <option>Video</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="mediaFile">Upload file</label>
+        <input (change)="onFileSelect($event)"
+         name="image" type="file" class="form-control-file" id="mediaFile">
+    </div>
+
+</form>

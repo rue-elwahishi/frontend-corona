@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ImageCropperModule } from "ngx-image-cropper";
 import {
   MatCardModule,
@@ -22,6 +22,7 @@ import { MatListModule } from "@angular/material/list";
 import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from './faq/faq.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FaqComponent } from './faq/faq.component';
     SidebarComponent,
     AdvicesComponent,
     SliderComponent,
-    FaqComponent
+    FaqComponent,
+    MediaComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { FaqComponent } from './faq/faq.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    ImageCropperModule
+    ImageCropperModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
