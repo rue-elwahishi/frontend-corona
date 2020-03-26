@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { map } from "rxjs/operators";
+import { map, mapTo } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -16,7 +16,9 @@ export class AuthService {
     let headers = new HttpHeaders();
     headers.append("Content-Type", "application/json");
     return this.http
-      .post("api/v1/login", user, { headers: headers })
-      .pipe(map(res => res));
+      .post("http://139.162.161.31/corona-backend/public/api/v1/login", user, {
+        headers: headers
+      })
+      .pipe(map(respone => console.log(respone)));
   }
 }
