@@ -39,8 +39,8 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data.code === 1000) {
         this.auth.storeUserDate(data.token);
-
         this.router.navigate(["home"]);
+        location.reload();
       } else
         this.flashmessage.show(data.msg, {
           cssClass: "alert-danger",
