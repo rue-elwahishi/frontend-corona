@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ImageCropperModule } from "ngx-image-cropper";
 import { AuthService } from "../../src/app/services/auth.service";
+import { ValidateService } from "../app/services/validate.service";
+import { FlashMessagesModule } from "angular2-flash-messages";
 import {
   MatCardModule,
   MatInputModule,
@@ -51,9 +53,10 @@ import { MediaComponent } from "./media/media.component";
     MatIconModule,
     MatListModule,
     ImageCropperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlashMessagesModule.forRoot()
   ],
-  providers: [AuthService],
+  providers: [AuthService, ValidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
