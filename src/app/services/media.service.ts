@@ -14,7 +14,7 @@ export class MediaService {
 
   constructor(private api:ApiService) {}
 
-  setRequest(advice_id: number, isNew: boolean) {
+  setRequest(advice_id: Number, isNew: Boolean) {
     this.request.advice_id = advice_id;
     this.request.isNew = isNew;
   }

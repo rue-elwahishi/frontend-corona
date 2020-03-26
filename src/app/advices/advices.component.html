@@ -5,18 +5,25 @@
   <form style="padding-top: 10%; padding-right: 13%;">
     <div class="form-group">
       <label for="exampleFormControlInput1"> Advice Title</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" />
+      <input [(ngModel)]='advice.name' name="name" type="email" class="form-control" id="exampleFormControlInput1" />
     </div>
 
     <div class="form-group">
       <label for="exampleFormControlTextarea1"> Advice Content</label>
       <textarea
+        [(ngModel)]='advice.description'
+        name="desc"
         class="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
       ></textarea>
     </div>
 
-    <button type="button" class="btn btn-primary">Insert</button>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Advice Phone Numbers</label>
+      <input [(ngModel)]='advice.phones' name="phones" type="email" class="form-control" id="exampleFormControlInput1" />
+    </div>
+
+    <button type="button" class="btn btn-primary" (click)="createAdvice()">Insert</button>
   </form>
 </div>
