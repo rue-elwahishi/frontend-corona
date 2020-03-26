@@ -1,30 +1,34 @@
 <div class="Container">
-  <mat-card>
-    <div class="title-flex-container">
-      <mat-card-title>
-        Corona
-      </mat-card-title>
-    </div>
-    <div class="input-flex-container">
-      <mat-card-content>
-        <mat-form-field>
-          <input class="form-row" matInput placeholder="User Name" />
-        </mat-form-field>
-        <br />
-        <mat-form-field>
-          <input
-            class="form-row"
-            type="password"
-            matInput
-            placeholder="Password"
-          />
-        </mat-form-field>
-      </mat-card-content>
-    </div>
-    <mat-card-actions>
-      <div class="button-flex-container">
-        <button mat-raised-button color="primary">Login</button>
-      </div>
-    </mat-card-actions>
-  </mat-card>
+  <!-- Default form login -->
+  <form
+    #signInForm="ngForm"
+    class="text-center border border-light p-5"
+    (ngSubmit)="signIn(signInForm)"
+  >
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input
+      ngModel
+      name="'email'"
+      type="email"
+      id="defaultLoginFormEmail"
+      class="form-control mb-4"
+      placeholder="E-mail"
+    />
+
+    <!-- Password -->
+    <input
+      ngModel
+      name="password"
+      type="password"
+      id="defaultLoginFormPassword"
+      class="form-control mb-4"
+      placeholder="Password"
+    />
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+  </form>
+  <!-- Default form login -->
 </div>

@@ -8,6 +8,7 @@ import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ImageCropperModule } from "ngx-image-cropper";
+import { AuthService } from "../../src/app/services/auth.service";
 import {
   MatCardModule,
   MatInputModule,
@@ -56,7 +57,8 @@ import { MediaService } from './services/media.service';
   ],
   providers: [
     ApiService,
-    MediaService
+    MediaService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
