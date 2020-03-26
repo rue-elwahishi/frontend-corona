@@ -23,6 +23,8 @@ import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from './faq/faq.component';
 import { MediaComponent } from './media/media.component';
+import { ApiService } from './services/api.service';
+import { MediaService } from './services/media.service';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,10 @@ import { MediaComponent } from './media/media.component';
     ImageCropperModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    MediaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
