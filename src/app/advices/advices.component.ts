@@ -19,7 +19,7 @@ export class AdvicesComponent implements OnInit {
     if(!Array.isArray(this.advice['phones']))
       this.advice['phones'] = this.advice['phones'].replace(/\s/g, '').split(',');
     
-    var id:Number = 1;
+    var id = 1;
     // create advice request
     // get advice ID and change media status to id
     this.media.setRequest(id, true);
