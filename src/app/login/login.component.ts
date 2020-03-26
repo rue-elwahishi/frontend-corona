@@ -4,7 +4,7 @@ import { AuthService } from "../services/auth.service";
 import { ValidateService } from "../services/validate.service";
 import { FlashMessagesService } from "angular2-flash-messages";
 import { Router } from "@angular/router";
-import { from } from "Corona-app/node_modules/rxjs";
+import { from } from "rxjs";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
