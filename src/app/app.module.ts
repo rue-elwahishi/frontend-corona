@@ -8,6 +8,7 @@ import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ImageCropperModule } from "ngx-image-cropper";
+import { AuthService } from "../../src/app/services/auth.service";
 import {
   MatCardModule,
   MatInputModule,
@@ -21,8 +22,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
-import { FaqComponent } from './faq/faq.component';
-import { MediaComponent } from './media/media.component';
+import { FaqComponent } from "./faq/faq.component";
+import { MediaComponent } from "./media/media.component";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { MediaComponent } from './media/media.component';
     ImageCropperModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
