@@ -1,6 +1,6 @@
 <div class="containter fill-height">
   <div class="fill-height m-0 row">
-    <div class="col-md-3 p-0 m-0 d-md-block">
+    <div *ngIf="isLogged()" class="col-md-3 p-0 m-0 d-md-block">
       <app-sidebar></app-sidebar>
     </div>
     <div class="col-md-9 m-0 p-0">

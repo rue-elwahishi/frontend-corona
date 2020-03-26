@@ -5,7 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from "./faq/faq.component";
-import { MediaComponent } from './media/media.component';
+import { MediaComponent } from "./media/media.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },

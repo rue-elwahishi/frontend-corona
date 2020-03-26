@@ -11,6 +11,7 @@ import { ImageCropperModule } from "ngx-image-cropper";
 import { AuthService } from "../../src/app/services/auth.service";
 import { ValidateService } from "../app/services/validate.service";
 import { FlashMessagesModule } from "angular2-flash-messages";
+import { JwtHelperService, JWT_OPTIONS } from "@auth0/angular-jwt";
 import {
   MatCardModule,
   MatInputModule,
@@ -58,7 +59,14 @@ import { MediaService } from "./services/media.service";
     ReactiveFormsModule,
     FlashMessagesModule.forRoot()
   ],
-  providers: [ApiService, MediaService, AuthService],
+  providers: [
+    ApiService,
+    MediaService,
+    AuthService,
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    JwtHelperService,
+    ValidateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
