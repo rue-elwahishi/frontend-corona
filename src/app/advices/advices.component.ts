@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from '../services/media.service';
+import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
+
 
 @Component({
   selector: 'app-advices',
@@ -10,7 +13,7 @@ export class AdvicesComponent implements OnInit {
 
   advice:Object = {};
 
-  constructor(private media:MediaService) { }
+  constructor(private media:MediaService, private router:Router, private api: ApiService) { }
 
   ngOnInit() {
   }
@@ -19,10 +22,14 @@ export class AdvicesComponent implements OnInit {
     if(!Array.isArray(this.advice['phones']))
       this.advice['phones'] = this.advice['phones'].replace(/\s/g, '').split(',');
     
-    var id = 1;
-    // create advice request
-    // get advice ID and change media status to id
-    this.media.setRequest(id, true);
+    this.api.createAdvice(this.advice)
+    .subscribe({
+      next: (id) => {
+        this.media.setRequest(id, true);
+        this.router.navigate(['/upload']);
+      }
+    })
+    
   }
 
 }
