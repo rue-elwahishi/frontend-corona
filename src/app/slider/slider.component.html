@@ -1,6 +1,7 @@
-<form [formGroup]="sliderUpload" (ngSubmit)>
+<form [formGroup]="sliderUpload" (ngSubmit)="upload">
   <div class="form-group">
-    <img src="{{default}}">
+    <img src="{{default}}"/>
+    <input type="file" name="file"/>
     <button type="submit">upload foto</button>
   </div>
 

@@ -10,10 +10,12 @@ export class SliderComponent implements OnInit {
   default: any =
     "https://filestore.community.support.microsoft.com/api/images/72e3f188-79a1-465f-90ca-27262d769841";
 
-  
-    
-  constructor(private formBuilder: FormBuilder) {
+  sliderUpload: FormGroup;
 
+  constructor(private formBuilder: FormBuilder) {
+    this.sliderUpload = formBuilder.group({
+      
+    });
   }
 
   ngOnInit() {}
