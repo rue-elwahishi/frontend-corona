@@ -30,18 +30,6 @@ export class AuthService {
     this.authToken = token;
   }
 
-  getAdminBoard() {
-    let headers = new HttpHeaders();
-    this.loadToken();
-    headers.append("Authorization", this.authToken);
-    headers.append("Content-Type", "application/json");
-    return this.http
-      .post("http://139.162.161.31/corona-backend/public/api/v1/ads", {
-        headers: headers
-      })
-      .pipe(map(respone => respone));
-  }
-
   loadToken() {
     const token = localStorage.getItem("id_token");
     this.authToken = token;

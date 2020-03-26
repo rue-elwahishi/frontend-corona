@@ -6,16 +6,17 @@ import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from "./faq/faq.component";
 import { MediaComponent } from "./media/media.component";
+import { AuthGuard } from "./guards/auth.guard";
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "home", component: HomeComponent, children: [] },
-  { path: "advices", component: AdvicesComponent },
-  { path: "Ads", component: SliderComponent },
-  { path: "FAQ", component: FaqComponent },
+  { path: "", redirectTo: "login", pathMatch: "full" },
+  { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
+  { path: "advices", component: AdvicesComponent, canActivate: [AuthGuard] },
+  { path: "Ads", component: SliderComponent, canActivate: [AuthGuard] },
+  { path: "FAQ", component: FaqComponent, canActivate: [AuthGuard] },
 
   { path: "login", component: LoginComponent },
-  { path: "upload", component: MediaComponent }
+  { path: "upload", component: MediaComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

@@ -29,6 +29,7 @@ import { FaqComponent } from "./faq/faq.component";
 import { MediaComponent } from "./media/media.component";
 import { ApiService } from "./services/api.service";
 import { MediaService } from "./services/media.service";
+import { AuthGuard } from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { MediaService } from "./services/media.service";
     AuthService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     JwtHelperService,
-    ValidateService
+    ValidateService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
