@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
 import { FormGroup } from '@angular/forms';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -13,18 +14,29 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getMedia() {
-    return this.http.get(`${this.base_url}/adminboard/media`);
+
+  // Advice requests
+
+  getAdvice(id: Number|String = ''){
+    return this.http.get(`${this.base_url}/adminboard/advice/${id}`)
+  }
+
+  createAdvice(details) {
+    return this.http.post(`${this.base_url}/adminboard/advice`, details);
+  }
+
+  // Media requests
+
+  getMedia(id = '') {
+    return this.http.get(`${this.base_url}/adminboard/media/${id}`);
   }
 
   uploadMedia(details:FormGroup) {
-    console.log(details);
-  //  return this.http.post(`${this.base_url}/adminboard/media`, details);
+   return this.http.post(`${this.base_url}/adminboard/media`, details);
   }
 
   patchMedia(details:FormGroup, id:Number) {
-    console.log(details, id)
-    // return this.http.post(`${this.base_url}/adminboard/media/${id}`, details);
+    return this.http.post(`${this.base_url}/adminboard/media/${id}`, details);
   }
   
 
