@@ -27,16 +27,26 @@ export class ApiService {
 
   // Media requests
 
-  getMedia(id = '') {
+  getMedia(id: Number|String = '') {
     return this.http.get(`${this.base_url}/adminboard/media/${id}`);
   }
 
   uploadMedia(details:FormGroup) {
-   return this.http.post(`${this.base_url}/adminboard/media`, details);
+    return this.http.post(`${this.base_url}/adminboard/media`, details);
   }
 
   patchMedia(details:FormGroup, id:Number) {
     return this.http.post(`${this.base_url}/adminboard/media/${id}`, details);
+  }
+
+  // FAQs requests
+
+  getFaq(id: Number|String = "") {
+    return this.http.get(`${this.base_url}/adminboard/faqs/${id}`);
+  }
+
+  createFaq(details) {
+    return this.http.post(`${this.base_url}/adminboard/faqs`, details);
   }
   
 
