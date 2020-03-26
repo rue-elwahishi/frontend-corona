@@ -13,6 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   authenticateUser(user) {
+    console.log(user, "user here")
     let headers = new HttpHeaders();
     headers.append("Content-Type", "application/json");
     return this.http

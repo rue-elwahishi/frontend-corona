@@ -26,6 +26,8 @@ import { AdvicesComponent } from "./advices/advices.component";
 import { SliderComponent } from "./slider/slider.component";
 import { FaqComponent } from "./faq/faq.component";
 import { MediaComponent } from "./media/media.component";
+import { ApiService } from "./services/api.service";
+import { MediaService } from "./services/media.service";
 
 @NgModule({
   declarations: [
@@ -56,7 +58,7 @@ import { MediaComponent } from "./media/media.component";
     ReactiveFormsModule,
     FlashMessagesModule.forRoot()
   ],
-  providers: [AuthService, ValidateService],
+  providers: [ApiService, MediaService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

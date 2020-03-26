@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { MediaService } from '../services/media.service';
 
 
 @Component({
@@ -11,13 +12,15 @@ export class MediaComponent implements OnInit {
 
   uploadForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private media: MediaService) { }
 
   ngOnInit() {
     this.uploadForm = this.formBuilder.group({
       image: new FormControl(),
       name: new FormControl(),
-      type: new FormControl()
+      type: new FormControl(),
+      advice_id: new FormControl(),
+      _method: new FormControl()
     });
   }
 
@@ -25,8 +28,8 @@ export class MediaComponent implements OnInit {
     if (event.target.files.length > 0){
       const file = event.target.files[0];
       this.uploadForm.get('image').setValue(file);
-      console.log(this.uploadForm);
       this.uploadForm.get('name').setValue(file.name);
+      this.media.upload(this.uploadForm);
     }
   }
 

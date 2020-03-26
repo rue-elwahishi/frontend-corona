@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import MediaReq from 'src/models/MediaReq';
 import { FormGroup } from '@angular/forms';
+import { ApiService } from './api.service';
 
 
 @Injectable({
@@ -9,20 +10,24 @@ import { FormGroup } from '@angular/forms';
 })
 export class MediaService {
 
-  request: MediaReq;
+  request: MediaReq = new MediaReq();
 
-  constructor() { 
-    
-  }
+  constructor(private api:ApiService) {}
 
-  setRequest(advice_id: number, isNew: boolean) {
+  setRequest(advice_id: Number, isNew: Boolean) {
     this.request.advice_id = advice_id;
     this.request.isNew = isNew;
   }
 
   upload(form: FormGroup) {
-    this.request.form = form;
-    //TODO: send request to API service 
+    if(this.request.isNew) {
+      form.get('_method').setValue('POST'); 
+      form.get('advice_id').setValue(this.request.advice_id);
+      this.api.uploadMedia(form);
+    } else {
+      form.get('_method').setValue('PATCH');
+      this.api.patchMedia(form, this.request.advice_id); 
+    }
   }
 
 }
